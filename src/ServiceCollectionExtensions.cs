@@ -1,6 +1,6 @@
 using Microsoft.Extensions.DependencyInjection;
 
-namespace IDateTime;
+namespace System;
 
 /// <summary>
 /// Service collection extensions.
