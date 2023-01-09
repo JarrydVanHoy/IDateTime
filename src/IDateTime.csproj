@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFrameworks>net6.0;net7.0</TargetFrameworks>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <RootNamespace>System</RootNamespace>
+        <PackageId>IDateTime</PackageId>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Authors>Jarryd Van Hoy (@JarrydVanHoy)</Authors>
+        <PackageProjectUrl>https://github.com/JarrydVanHoy/IDateTime</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/JarrydVanHoy/IDateTime</RepositoryUrl>
+        <PackageLicenseFile>LICENSE</PackageLicenseFile>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <Description>Decouple the use of the DateTime class by injecting the IDateTime interface instead. This provides a default implementation which is a passthrough to the DateTime class itself.</Description>
+        <PackageTags>datetime idatetime decouple</PackageTags>
+        <PackageReleaseNotes>
+            First release of the package
+        </PackageReleaseNotes>
+        <Version>1.0.0-beta01</Version>
+        <PackageIcon>icon.jpeg</PackageIcon>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+        <DocumentationFile>bin\Release\$(Configuration)\IDateTime.xml</DocumentationFile>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="..\LICENSE" Pack="true" PackagePath="" />
+        <None Include="..\README.md" Pack="true" PackagePath="" />
+        <None Include="..\icon.jpeg" Pack="true" PackagePath="" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" Condition="'$(TargetFramework)' == 'net6.0'" />
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" Condition="'$(TargetFramework)' == 'net7.0'" />
+    </ItemGroup>
+
+</Project>
