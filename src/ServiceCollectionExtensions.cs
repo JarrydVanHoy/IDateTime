@@ -12,7 +12,7 @@ public static class ServiceCollectionExtensions
     /// </summary>
     /// <param name="services"></param>
     /// <returns></returns>
-    public static IServiceCollection AddIDateTime(IServiceCollection services)
+    public static IServiceCollection AddIDateTime(this IServiceCollection services)
     {
         return services.AddSingleton<IDateTime, DateTimeProvider>();
     }
