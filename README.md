@@ -5,6 +5,11 @@
 
 Inject IDateTime to remove the hard dependency against the DateTime class. This makes it easier to decouple and test your code by making your use of DateTime mockable or providing your own implementation.
 
+## Supported Frameworks
+
+- .NET 8
+- .NET 10
+
 ## NuGet Installation
 
 Install the [IDateTime NuGet package](https://nuget.org/packages/IDateTime):
